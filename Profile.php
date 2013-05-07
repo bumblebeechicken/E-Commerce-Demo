@@ -1,0 +1,1 @@
+<?php 	$title = "My Profile";	$page = "profile";	require_once("header.php"); ?>  	<h2>My Profile</h2>	<article>		<p>:( no time to implement...</p>	</article>					<?php require_once("footer.php"); ?>

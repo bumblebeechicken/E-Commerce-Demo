@@ -1,0 +1,646 @@
+/* 
+Jason Stepp 
+CIS 425 15236
+*/
+
+/*Remove all the default padding and margins from all tags*/
+*{
+	padding:0px;
+	margin:0px;
+}
+
+body {
+	font-family: Verdana, Arial, sans-serif;
+	text-align:center;
+	background:#94B5D1;
+}
+
+img{
+	border:0px;
+}
+
+h1{
+	font-size: 2.0em;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+h2{
+	font-size: 1.6em;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+h3{
+	font-size: 1.3em;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+h4{
+	font-size: 1.1em;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+h5{
+	font-size: 1.0em;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+h6{
+	font-size: 0.9em;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+a:link{
+	color:#B80000;
+}
+
+a:visited{
+	color:#0040FF;
+}
+
+a:hover{
+	color:#FF1919;
+}
+
+aside p{
+	font-size: 0.9em;
+}
+
+aside h3 {
+	text-align:center;
+	border-bottom: 1px solid #E0E0E0;
+	margin-bottom:5px;
+}
+
+article{
+	font-size: 0.9em;
+	padding:10px;
+}
+
+article p {
+	padding: 5px;
+}
+
+article p.critical{
+	color:red;
+}
+
+article h3{
+	padding:5px;
+}
+
+label {
+	width: 14em;
+	float: left;
+	text-align: right;
+	display:block;
+	padding-right:5px;
+}
+
+
+input, textarea, select{
+	padding:5px;
+}
+
+
+input.box{
+	border:1px solid gray;
+	padding-right:20px;
+}
+
+label.product {
+	width:auto;
+	float: left;
+	text-align: right;
+	display:block;
+	padding-right:5px;
+	vertical-align:middle;
+}
+
+input.quantity{
+	border:1px solid gray;
+	width:25px;
+	padding-right:20px;
+}
+
+
+span{
+	margin-left:5px;
+}
+
+code{
+	padding:10px;
+	background: #eeeeee;
+	display:block;
+	border:1px solid #dddddd;
+	margin-left:20px;
+	margin-right:25px;
+	margin-top:10px;
+}
+
+/*This DIV is for the background gradient effect.
+The height is set to a specified length so the gradient effect can be set to a determined area on the page*/
+#fancypants{
+	background:#94B5D1;
+	height:400px; /*I set a specific height to control how far the gradient extends down the page*/
+	
+	/*This section will not validate using CSS3*/
+	/*===================================================*/
+	background-image: linear-gradient(top, #EBFBFF 0%, #94B5D1 100%);
+	background-image: -o-linear-gradient(top, #EBFBFF 0%, #94B5D1 100%);
+	background-image: -moz-linear-gradient(top, #EBFBFF 0%, #94B5D1 100%);
+	background-image: -webkit-linear-gradient(top, #EBFBFF 0%, #94B5D1 100%);
+	background-image: -ms-linear-gradient(top, #EBFBFF 0%, #94B5D1 100%);
+	/*===================================================*/
+}
+
+/*A wrapper DIV to center the page with auto margins.
+And to set a minimum width for the page content*/
+#page_wrapper{
+	text-align:left;
+	width: 1000px;
+	margin: 0px auto;
+	
+}
+
+#page_heading {
+	text-align: left;
+	color:black;
+	padding:20px;
+	float:left;
+}
+
+/*Site logo*/
+#clover{
+	padding-top:5px;
+}
+
+/*Main heading navigation*/
+#head_nav{
+	clear:both;
+	float:left;
+	margin-bottom:5px;
+	margin-left:10px;
+}
+
+/*Format the unordered list as inline and add styling*/
+#head_nav li{
+	display:inline;
+	list-style-type:none;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size:0.9em;
+	background: white;
+	padding:5px 15px 5px 15px;
+	border-top: 1px solid #D3D3D3;
+	border-left: 1px solid #D3D3D3;
+	border-right: 1px solid #D3D3D3;
+	border-bottom: 1px solid #D3D3D3;
+	
+	margin-left:10px;
+	
+	/*Opacity lines do not validate in CSS3*/
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+/*Style for the selected class for navigation list items*/
+#head_nav li.selected{
+	display:inline;
+	list-style-type:none;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size:0.9em;
+	background: white;
+	border-top: 1px solid #D3D3D3;
+	border-left: 1px solid #D3D3D3;
+	border-right: 1px solid #D3D3D3;
+	border-bottom: 1px solid white;
+
+	/*Opacity lines do not validate in CSS3*/
+	opacity: 1;
+	filter:alpha(opacity=100);
+	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+/*List item hover styles*/
+#head_nav li:hover{
+	background: white;
+	
+	/*Opacity lines do not validate in CSS3*/
+	opacity: 1;
+	filter:alpha(opacity=100);
+}
+
+/*Navigation text styles*/
+#head_nav li a{
+	text-decoration:none;
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+	margin-left:-15px;
+	margin-right:-15px;
+}
+
+/*Navigation text hover styles*/
+#head_nav li:hover a{
+	color:#FF1919;
+}
+
+/*This wrapper DIV holds the External Links, and Main Content DIVs*/
+#content_wrapper{
+	clear: both;
+	overflow:hidden;
+	background:white;
+	border: 1px solid #D3D3D3;
+	padding-top:20px;
+	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	
+	/*This line will not validate in CSS3*/
+	box-shadow: 10px 10px 10px rgba(0,0,0,0.3); /*Drop shadow for the content wrapper DIV with an RBGA to make it transparent*/
+}
+
+#updates{
+	border-left: 1px solid #E0E0E0;
+	float: right;
+	width:220px;
+	padding:20px;
+}
+
+#main {
+	margin-right: 260px;
+	padding-left: 20px;
+	border-right: 1px solid #E0E0E0;
+
+}
+
+#main article{
+	border-bottom:1px dashed #707070;
+	padding:20px;
+}
+
+/*This changes the border of the last article in the section
+to white.*/
+#main article:last-child{
+	border-bottom:1px solid white;
+	padding:20px;
+}
+
+#main article.old{
+	color:#cccccc;
+}
+
+#register_description{
+
+}
+
+#userform{
+	
+}
+
+#userform_button{
+	padding-left: 26em;
+}
+
+#cartform_button{
+	text-align:right;
+}
+
+#page_footer{
+	text-align: left;
+	font-size: 0.7em;
+	clear: both;
+	padding:10px;
+	color:black; 
+}
+
+
+input.error{
+	background:white url(../img/error.png) right no-repeat;
+	border:1px solid #e77776;
+}
+
+input.valid{
+	background:white url(../img/valid.png) right no-repeat;
+	border:1px solid gray;
+}
+
+span.msg{
+	color:gray;
+	background-color:white;
+}
+
+span.valid{
+	color:#339900;
+	background-color:white;
+}
+
+span.error{
+	color:#e77776;
+	background-color:white;
+}
+
+p.error{
+	color:#e77776;
+	background-color:white;
+	margin-left:14em;
+	display:inline;
+}
+
+
+
+/*Main heading navigation*/
+#login_nav{
+	width:400px;
+	float:right;
+	margin-bottom:5px;
+	margin-right:10px;
+	text-align:right;
+}
+
+/*Format the unordered list as inline and add styling*/
+#login_nav li{
+	display:inline;
+	list-style-type:none;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size:0.9em;
+	padding:5px 15px 5px 15px;
+	background: white;
+	border-top: 1px solid #D3D3D3;
+	border-left: 1px solid #D3D3D3;
+	border-right: 1px solid #D3D3D3;
+	border-bottom: 1px solid #D3D3D3;
+	
+	margin-right:10px;
+	
+	/*Opacity lines do not validate in CSS3*/
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+/*Style for the selected class for navigation list items*/
+#login_nav li.selected{
+	display:inline;
+	list-style-type:none;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size:0.9em;
+	background: white;
+	border-top: 1px solid #D3D3D3;
+	border-left: 1px solid #D3D3D3;
+	border-right: 1px solid #D3D3D3;
+	border-bottom: 1px solid white;
+
+	/*Opacity lines do not validate in CSS3*/
+	opacity: 1;
+	filter:alpha(opacity=100);
+	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+/*List item hover styles*/
+#login_nav li:hover{
+	background: white;
+	
+	/*Opacity lines do not validate in CSS3*/
+	opacity: 1;
+	filter:alpha(opacity=100);
+}
+
+/*Navigation text styles*/
+#login_nav a{
+	text-decoration:none;
+	
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+	margin-left:-15px;
+	margin-right:-15px;
+}
+
+/*Navigation text hover styles*/
+#login_nav li:hover a{
+	color:#FF1919;
+}
+
+
+/*User login message*/
+#user_message {
+	text-align: right;
+	color:black;
+	padding:20px;
+	float:right;
+}
+
+#spacer
+{
+	padding:50px;
+}
+
+span.copyright{
+	color:black;
+	margin-right:780px;
+	float:left;
+}
+
+span.topling{
+	text-align: right;
+	width:100px;
+	float:left;
+}
+
+img.prod_sm
+{
+	border: 1px solid #E0E0E0;
+	/*This line will not validate in CSS3*/
+	box-shadow: 7px 7px 7px rgba(0,0,0,0.3); /*Drop shadow for the content wrapper DIV with an RBGA to make it transparent*/
+}
+
+#prod_md
+{
+	float:left;
+	margin-bottom:10px;
+	padding:10px;
+	border: 1px solid #E0E0E0;
+	/*This line will not validate in CSS3*/
+	box-shadow: 7px 7px 7px rgba(0,0,0,0.3); /*Drop shadow for the content wrapper DIV with an RBGA to make it transparent*/
+}
+
+#main article.product
+{
+	padding:0px;
+	padding-right:10px;
+	padding-left:10px;
+	margin-left:400px;
+	border:0px solid white;
+}
+
+#main article.cartform
+{
+	padding:0px;
+	padding-right:10px;
+	padding-left:10px;
+	margin-left:400px;
+	margin-top:40px;
+	border:0px solid white;
+}
+
+#main article#gallery
+{
+	border:0px solid white;
+	padding:0px;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+#main article.gal_left
+{
+	float:left;
+	padding:0px;
+	border:0px solid white;
+	margin-bottom:40px;
+}
+
+#main article.gal_center
+{
+	float:left;
+	padding:0px;
+	padding-left:30px;
+	padding-right:30px;
+	border:0px solid white;
+	margin-bottom:40px;
+}
+
+#main article.gal_right
+{
+	float:left;
+	padding:0px;
+	border:0px solid white;
+	margin-bottom:40px;
+}
+
+span.discount
+{
+	color: red;
+	font-weight:bold;
+}
+
+
+div.clear
+{
+	clear:both;
+	padding:0px;
+	margin:0px;
+}
+
+img.cart
+{
+	vertical-align:bottom;
+}
+
+
+
+/*================================*/
+/*Shopping Cart     */
+/*================================*/
+#main #cartheader
+{
+	border:0px solid white;
+	padding:5px;
+	background-color:#E0E0E0;
+	margin-top:5px;
+}
+
+#cartheader span.imagespace
+{
+	margin-left:120px;
+}
+
+#cartheader span.quantityheader
+{
+	margin-left:140px;
+}
+
+#cartheader span.priceheader
+{
+	margin-left:50px;
+}
+
+article.cartitem div.itemtitle
+{
+	margin-left:20px;
+	width:110px;
+	float:left;
+}
+
+article.cartitem div.itemquantity
+{
+	margin-left:100px;
+	width:25px;
+	float:left;
+}
+
+article.cartitem div.itemprice
+{
+	margin-left:40px;
+	width:200px;
+	float:left;
+}
+
+article.cartitem div.itemprice p.discount
+{
+	color:red;
+}
+
+article.cartitem div.itemprice p.discountprice
+{
+	border-top:1px dotted black;
+	font-weight:bold;
+}
+
+article.cartitem div.itemprice p.originalprice
+{
+	text-decoration:line-through;
+}
+
+article.cartitem div.itemtrash
+{
+	float:left;
+}
+
+#main article.subtotal
+{
+	border:0px;
+}
+
+#main article.subtotal p.subtotal
+{
+	margin-left:500px;
+}
+
+img.cartlist
+{
+	width:100px;
+	height:100px;
+	float:left;
+	border: 1px solid #E0E0E0;
+	/*This line will not validate in CSS3*/
+	box-shadow: 7px 7px 7px rgba(0,0,0,0.3); /*Drop shadow for the content wrapper DIV with an RBGA to make it transparent*/
+}
+
+article.cartitem
+{
+	height:100px;
+}
+
+span.old_price
+{
+	text-decoration:line-through;
+}
